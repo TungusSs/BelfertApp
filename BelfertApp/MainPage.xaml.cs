@@ -2,16 +2,32 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
 
-	}
+
+    private void MineralFertilizers_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void PlantProtectionProducts_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void CommonConsumptionGoods_Clicked(object sender, EventArgs e)
+    {
+
+    }
+
+    private void ChemicalProducts_Clicked(object sender, EventArgs e)
+    {
+
+    }
 }
 

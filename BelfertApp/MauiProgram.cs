@@ -11,8 +11,13 @@ public static class MauiProgram
 			.UseMauiApp<App>()
 			.ConfigureFonts(fonts =>
 			{
-				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+				fonts.AddFont("YouTubeSansDarkBlack.ttf", "YouTubeSansDarkBlack");
+				fonts.AddFont("YouTubeSansDarkBold.ttf", "YouTubeSansDarkBold");
+				fonts.AddFont("YouTubeSansDarkExtraBold.ttf", "YouTubeSansDarkExtraBold");
+				fonts.AddFont("YouTubeSansDarkLight.ttf", "YouTubeSansDarkLight");
+				fonts.AddFont("YouTubeSansDarkMedium.ttf", "YouTubeSansDarkMedium");
+				fonts.AddFont("YouTubeSansDarkRegular.ttf", "YouTubeSansDarkRegular");
+				fonts.AddFont("YouTubeSansDarkSemiBold.ttf", "YouTubeSansDarkSemiBold");
 			});
 
 #if DEBUG

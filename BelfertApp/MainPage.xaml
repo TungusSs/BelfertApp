@@ -2,13 +2,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BelfertApp.MainPage"
              BackgroundColor="Transparent"
-             BackgroundImageSource="farmers.png">
+             BackgroundImageSource="field.png">
 
     
     <ScrollView>
         <StackLayout 
                 HorizontalOptions="CenterAndExpand" 
                 VerticalOptions="CenterAndExpand">
+
+            <Image x:Name="BelfertLogo" Margin="0" Source="logo.png" AnchorY="200"/>
 
             <Grid>
                 <Grid.RowDefinitions>

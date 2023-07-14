@@ -9,6 +9,7 @@
     <ShellContent
         Title="Главная"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage"
+        Content="logo.png"/>
 
 </Shell>

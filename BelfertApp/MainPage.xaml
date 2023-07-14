@@ -4,141 +4,157 @@
              BackgroundColor="Transparent"
              BackgroundImageSource="field.png">
 
-    
-    <ScrollView>
-        <StackLayout 
-                HorizontalOptions="CenterAndExpand" 
+    <StackLayout>
+        <SearchBar Placeholder="Поиск удобрений в каталоге..." 
+                   BackgroundColor="LightGray"/>
+        
+        <Grid>
+            <Image x:Name="BelfertLogo"
+                   Margin="5"
+                   Aspect="AspectFit"
+                   Source="logo.png"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Center"
+                   HeightRequest="100">
+                <Image.TranslationY>-2</Image.TranslationY>
+                <Image.Shadow>
+                    <Shadow Brush="Black"
+                            Offset="5,5"
+                            Radius="5"
+                            Opacity="1"/>
+                </Image.Shadow>
+            </Image>
+        </Grid>
+        
+        <ScrollView>
+            <StackLayout
+                HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand">
 
-            <Image x:Name="BelfertLogo" Margin="0" Source="logo.png" AnchorY="200"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="130"/>
+                        <RowDefinition Height="130"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="190"/>
+                        <ColumnDefinition Width="190"/>
+                    </Grid.ColumnDefinitions>
 
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="130"/>
-                    <RowDefinition Height="130"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="190"/>
-                    <ColumnDefinition Width="190"/>
-                </Grid.ColumnDefinitions>
-                
-                <!-- Минеральные удобрения -->
-                <Button
-                    x:Name="MineralFertilizers"
-                    Grid.Row="0" 
-                    Grid.Column="0" 
-                    Margin="10" 
-                    Padding="10" 
-                    CornerRadius="5"
-                    Text="Минеральные удобрения"
-                    WidthRequest="175"
-                    FontSize="Medium"
-                    FontFamily="YouTubeSansDarkExtraBold"
-                    FontAutoScalingEnabled="True"
-                    LineBreakMode="WordWrap"
-                    Clicked="MineralFertilizers_Clicked">
-                    <Button.Background>
-                        <LinearGradientBrush 
-                            StartPoint="0,0" 
-                            EndPoint="1,1">
-                            <GradientStop 
-                                Color="#20BF55" 
-                                Offset="0.1"/>
-                            <GradientStop 
-                                Color="#01BAEF"
-                                Offset="1.0"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+                    <!-- Минеральные удобрения -->
+                    <Button x:Name="MineralFertilizers"
+                            Grid.Row="0" 
+                            Grid.Column="0" 
+                            Margin="10" 
+                            Padding="10" 
+                            CornerRadius="5"
+                            Text="Минеральные удобрения"
+                            WidthRequest="175"
+                            FontSize="Medium"
+                            FontFamily="YouTubeSansDarkExtraBold"
+                            FontAutoScalingEnabled="True"
+                            LineBreakMode="WordWrap"
+                            Clicked="MineralFertilizers_Clicked">
+                        <Button.Background>
+                            <LinearGradientBrush 
+                                StartPoint="0,0" 
+                                EndPoint="1,1">
+                                <GradientStop 
+                                    Color="#20BF55" 
+                                    Offset="0.1"/>
+                                <GradientStop 
+                                    Color="#01BAEF"
+                                    Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
 
-                <!-- Средства защиты растений -->
-                <Button
-                    x:Name="PlantProtectionProducts"
-                    Grid.Row="0" 
-                    Grid.Column="1" 
-                    Margin="10" 
-                    Padding="10" 
-                    CornerRadius="5" 
-                    Text="Средства защиты растений"
-                    WidthRequest="175"
-                    FontSize="Medium"
-                    FontFamily="YouTubeSansDarkExtraBold"
-                    FontAutoScalingEnabled="True"
-                    LineBreakMode="WordWrap"
-                    Clicked="PlantProtectionProducts_Clicked">
-                    <Button.Background>
-                        <LinearGradientBrush 
-                            StartPoint="0,0" 
-                            EndPoint="1,1">
-                            <GradientStop 
-                                Color="#20BF55" 
-                                Offset="0.1"/>
-                            <GradientStop 
-                                Color="#01BAEF"
-                                Offset="1.0"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+                    <!-- Средства защиты растений -->
+                    <Button x:Name="PlantProtectionProducts"
+                            Grid.Row="0" 
+                            Grid.Column="1" 
+                            Margin="10" 
+                            Padding="10" 
+                            CornerRadius="5" 
+                            Text="Средства защиты растений"
+                            WidthRequest="175"
+                            FontSize="Medium"
+                            FontFamily="YouTubeSansDarkExtraBold"
+                            FontAutoScalingEnabled="True"
+                            LineBreakMode="WordWrap"
+                            Clicked="PlantProtectionProducts_Clicked">
+                        <Button.Background>
+                            <LinearGradientBrush 
+                                StartPoint="0,0" 
+                                EndPoint="1,1">
+                                <GradientStop 
+                                    Color="#20BF55" 
+                                    Offset="0.1"/>
+                                <GradientStop 
+                                    Color="#01BAEF"
+                                    Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
 
-                <!-- Товары народного потребления -->
-                <Button
-                    x:Name="CommonConsumptionGoods"
-                    Grid.Row="1" 
-                    Grid.Column="0" 
-                    Margin="10" 
-                    Padding="10" 
-                    CornerRadius="5" 
-                    Text="Товары народного потребления"
-                    WidthRequest="175"
-                    FontSize="Medium"
-                    FontFamily="YouTubeSansDarkExtraBold"
-                    FontAutoScalingEnabled="True"
-                    LineBreakMode="WordWrap"
-                    Clicked="CommonConsumptionGoods_Clicked">
-                    <Button.Background>
-                        <LinearGradientBrush 
-                            StartPoint="0,0" 
-                            EndPoint="1,1">
-                            <GradientStop 
-                                Color="#20BF55" 
-                                Offset="0.1"/>
-                            <GradientStop 
-                                Color="#01BAEF"
-                                Offset="1.0"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
+                    <!-- Товары народного потребления -->
+                    <Button x:Name="CommonConsumptionGoods"
+                            Grid.Row="1" 
+                            Grid.Column="0" 
+                            Margin="10" 
+                            Padding="10" 
+                            CornerRadius="5" 
+                            Text="Товары народного потребления"
+                            WidthRequest="175"
+                            FontSize="Medium"
+                            FontFamily="YouTubeSansDarkExtraBold"
+                            FontAutoScalingEnabled="True"
+                            LineBreakMode="WordWrap"
+                            Clicked="CommonConsumptionGoods_Clicked">
+                        <Button.Background>
+                            <LinearGradientBrush 
+                                StartPoint="0,0" 
+                                EndPoint="1,1">
+                                <GradientStop 
+                                    Color="#20BF55" 
+                                    Offset="0.1"/>
+                                <GradientStop 
+                                    Color="#01BAEF"
+                                    Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
 
-                <!-- Химическая продукция -->
-                <Button
-                    x:Name="ChemicalProducts"
-                    Grid.Row="1" 
-                    Grid.Column="1" 
-                    Margin="10" 
-                    Padding="10" 
-                    CornerRadius="5" 
-                    Text="Химическая продукция"
-                    WidthRequest="175"
-                    FontSize="Medium"
-                    FontFamily="YouTubeSansDarkExtraBold"
-                    FontAutoScalingEnabled="True"
-                    LineBreakMode="WordWrap"
-                    Clicked="ChemicalProducts_Clicked">
-                    <Button.Background>
-                        <LinearGradientBrush 
-                            StartPoint="0,0" 
-                            EndPoint="1,1">
-                            <GradientStop 
-                                Color="#20BF55" 
-                                Offset="0.1"/>
-                            <GradientStop 
-                                Color="#01BAEF"
-                                Offset="1.0"/>
-                        </LinearGradientBrush>
-                    </Button.Background>
-                </Button>
-            </Grid>
-        </StackLayout>
-    </ScrollView>
+                    <!-- Химическая продукция -->
+                    <Button x:Name="ChemicalProducts"
+                            Grid.Row="1" 
+                            Grid.Column="1" 
+                            Margin="10" 
+                            Padding="10" 
+                            CornerRadius="5" 
+                            Text="Химическая продукция"
+                            WidthRequest="175"
+                            FontSize="Medium"
+                            FontFamily="YouTubeSansDarkExtraBold"
+                            FontAutoScalingEnabled="True"
+                            LineBreakMode="WordWrap"
+                            Clicked="ChemicalProducts_Clicked">
+                        <Button.Background>
+                            <LinearGradientBrush 
+                                StartPoint="0,0" 
+                                EndPoint="1,1">
+                                <GradientStop 
+                                    Color="#20BF55" 
+                                    Offset="0.1"/>
+                                <GradientStop 
+                                    Color="#01BAEF"
+                                    Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
 
-</ContentPage>
+</ContentPage> 
